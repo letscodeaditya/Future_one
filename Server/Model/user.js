@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema({
     founderProfile:{type: mongoose.Schema.ObjectId, ref:'FounderProfile'},
     investorProfile:{type: mongoose.Schema.ObjectId, ref:'investorProfile'},
     createdAt: {type: Date, default:Date.now},
+    isProfileComplete: { type: Boolean, default: false },
     pic: {
         type: String,
         default: function () {
